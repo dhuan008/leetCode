@@ -2,13 +2,14 @@
  * @param {number[]} nums
  * @return {number}
  */
-var removeDuplicates = function(nums) {
-    let j = 0;
-    for (let i = 1; i < nums.length; i++) {
-        if (nums[i] !== nums[j]) {
-            j++;
-            nums[j] = nums[i];
+const removeDuplicates = nums => {
+    const set = new Set();
+    let lastGoodIndex = 0;
+    for (let i = 0; i < nums.length; i++) {
+        if(!set.has(nums[i])) {
+            set.add(nums[i]);
+            nums[lastGoodIndex++] = nums[i];
         }
     }
-    return j + 1;
+    return lastGoodIndex;
 };
