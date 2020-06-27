@@ -16,7 +16,7 @@ const reverse = x => {
 /**
  * @param {number} x
  * @return {number}
- * Overflow testing if 32 bit
+ * Overflow testing if 32 bit doesn't work because JS is 64 bit
  */
 const reverse = x => {
     let reversedInt = 0,
