@@ -3,10 +3,11 @@
  * @return {number}
  */
 const reverse = x => {
-    let reversedInt = 0;
-    while (x != 0) {
-        let pop = x % 10;
-        x = Math.floor(x/10);
+    let reversedInt = 0,
+        pop = 0;
+    while (x) {
+        pop = x % 10;
+        x = parseInt(x/10);
         reversedInt = reversedInt * 10 + pop;
     }
     if (reversedInt < Math.pow(-2, 31) || reversedInt > Math.pow(2, 31)) {
