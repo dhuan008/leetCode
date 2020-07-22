@@ -11,7 +11,7 @@
  * @return {TreeNode}
  */
 const sortedArrayToBST = nums => {
-	if (nums.length === 0) {
+    if (nums.length === 0) {
 		return null;
 	}
     let middle = Math.floor(nums.length / 2);
