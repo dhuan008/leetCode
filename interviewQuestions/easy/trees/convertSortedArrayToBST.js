@@ -11,6 +11,9 @@
  * @return {TreeNode}
  */
 const sortedArrayToBST = nums => {
+	if (nums.length === 0) {
+		return null;
+	}
     let middle = Math.floor(nums.length / 2);
     let root = new TreeNode(nums[middle]);
     root.left = sortedArrayToBST(nums.slice(0, middle));
