@@ -11,3 +11,8 @@ const isPowerOfThree = n => {
     }
     return n === 1;
 };
+
+// Alternative solution
+const isPowerOfThree = n => {
+    return ( Math.log(n) / Math.log(3) ) % 1 < 0.00000000000001;
+};
